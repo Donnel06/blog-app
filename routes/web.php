@@ -41,11 +41,11 @@ Route::controller(UsersController::class)->group(function () {
     Route::delete('/delete/{user}', [UsersController::class, 'destroy'])->middleware(['auth', 'admin'])->name('users.destroy');
 });
 
-Route::resource('posts', PostsController::class);
+Route::resource('/posts', PostsController::class);
 
-Route::resource('comments', CommentsController::class);
+Route::resource('/comments', CommentsController::class);
 
-Route::get('comments/{comment}/report', [CommentsController::class, 'report'])->name('comments.report');
+Route::get('/comments/{comment}/report', [CommentsController::class, 'report'])->name('comments.report');
 
 Route::get('/', [PostsController::class, 'index'])
 ->name('posts.index');

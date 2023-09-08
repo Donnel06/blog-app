@@ -20,9 +20,6 @@
                 <label for="content" class="block text-gray-700 text-sm font-bold mb-2">Contenu du poste :</label>
                 <textarea id="content" name="content" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" rows="6" placeholder="Entrez le contenu du poste" required></textarea>
             </div>
-
-           
-
             
             <div class="py-2">
                 <input type="submit" class="cursor-pointer inline-flex items-center w-1/4 py-4 border border-gray-400 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white justify-center" value="Créer">

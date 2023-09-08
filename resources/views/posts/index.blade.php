@@ -158,6 +158,31 @@
                 </div>
             </div>
         </div>
+        
+        <div class="py-12">
+        <div class="max-w-lg mx-auto bg-white shadow-md rounded-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Espace commentaire</h2>
+
+        <form action="{{ route('comments.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+
+            <div class="mb-4">
+                <label for="title" class="block text-gray-700 text-sm font-bold mb-2">Nom :</label>
+                <input type="text" id="title" name="title" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" placeholder="Entrez votre nom" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="content" class="block text-gray-700 text-sm font-bold mb-2">Contenu :</label>
+                <textarea id="content" name="content" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" rows="6" placeholder="Entrez le contenu du commentaire" required></textarea>
+            </div>
+            
+            <div class="py-2">
+                <input type="submit" class="cursor-pointer inline-flex items-center w-1/4 py-4 border border-gray-400 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white justify-center" value="Envoyer">
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
         @include('partials.footer')
     </div>
 
